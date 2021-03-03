@@ -1,9 +1,6 @@
-# hex game
+# Hex Game
 
-This project is a little game for matching hex code with the right
-color, start the game by clicking on the play box then click on the
-color you think is corrcet. The project was created with only vanilla
-Javascript, without uesing any of Javascript frameworks.
+This project is a game for matching hex code with the right color, start the game by clicking on the play button then click on the color you think is corrcet, the project was built with bunch of IF statments using vanilla Javascript.
 
 
 
