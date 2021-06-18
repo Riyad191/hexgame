@@ -36,9 +36,10 @@ function hex() {
     givenTitle;
     if (random != 1 && random != 6) {
       p1.innerHTML = String.fromCodePoint(0x1f612);
+
       p1.style.fontSize = "30px";
       p1.disabled = true;
-      // p1.style.opacity = "0.1";
+      // p1.style.opacity = "0.6";
       guessesLeft -= 1;
     }
     if (guessesLeft == 0) {
@@ -89,7 +90,9 @@ function hex() {
     }
     if (random != 2 && random != 7) {
       p2.disabled = true;
-      p2.innerHTML = String.fromCodePoint(0x1f614);
+      // p2.innerHTML = String.fromCodePoint(0x1f614);
+      p2.innerHTML = String.fromCodePoint(0x1f621);
+
       // p2.style.opacity = "0.1";
       guessesLeft -= 1;
     }
@@ -141,7 +144,10 @@ function hex() {
     }
     if (random != 3 && random != 0) {
       p3.disabled = true;
-      p3.innerHTML = String.fromCodePoint(0x1f925);
+      // p3.innerHTML = String.fromCodePoint(0x1f925);
+      // p3.innerHTML = String.fromCodePoint(0x1f623);
+      p3.innerHTML = String.fromCodePoint(0x1f44e);
+
       // p2.style.opacity = "0.1";
       guessesLeft -= 1;
     }
@@ -193,7 +199,10 @@ function hex() {
     }
     if (random != 5) {
       p4.disabled = true;
-      p4.innerHTML = String.fromCodePoint(0x1f974);
+
+      p4.innerHTML = String.fromCodePoint(0x1f44a);
+      // p4.innerHTML = String.fromCodePoint(0x1f623);
+
       // p4.style.opacity = "0.1";
       guessesLeft -= 1;
     }
@@ -233,7 +242,7 @@ function hex() {
   p5.addEventListener("click", one5);
   function one5() {
     if (random == 8) {
-      // p5.innerHTML = "Congatulations";
+      // p5.innerHTML = "Yaaay";
       p5.innerText = String.fromCodePoint(0x1f929, 0x1f618);
       score.style.color = "rgb(0, 197, 0)";
       p1.disabled = true;
@@ -245,7 +254,8 @@ function hex() {
     }
     if (random != 8) {
       p5.disabled = true;
-      p5.innerHTML = String.fromCodePoint(0x1f635);
+      // p5.innerHTML = String.fromCodePoint(0x1f635);
+      p5.innerHTML = String.fromCodePoint(0x1f4a9);
       // p5.style.opacity = "0.1";
       guessesLeft -= 1;
     }
@@ -297,7 +307,10 @@ function hex() {
     }
     if (random != 9 && random != 4) {
       p6.disabled = true;
-      p6.innerHTML = String.fromCodePoint(0x1f61f);
+
+      p6.innerHTML = String.fromCodePoint(0x1f974);
+      // p6.innerHTML = String.fromCodePoint(0x1f346);
+
       // p6.style.opacity = "0.1";
       guessesLeft -= 1;
     }
@@ -448,3 +461,4 @@ function hex() {
     p6.style.background = "blue";
   }
 }
+hex();
