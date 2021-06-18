@@ -10,6 +10,8 @@ var p3 = document.querySelector(".p3");
 var p4 = document.querySelector(".p4");
 var p5 = document.querySelector(".p5");
 var p6 = document.querySelector(".p6");
+var tryNum = document.querySelector(".tryNum");
+var scoreNum = document.querySelector(".scoreNum");
 
 var random = Math.floor(Math.random() * 10);
 console.log(random);
@@ -23,6 +25,31 @@ function hex() {
   p1.addEventListener("click", one1);
   function one1() {
     if (random == 1 || random == 6) {
+      if (guessesLeft === 3) {
+        tryNum.innerHTML = "First Try";
+        tryNum.style.textAlign = "center";
+        scoreNum.innerHTML = "100 of 100";
+
+        tryNum.style.textAlign = "center";
+        // scoreNum.style.fontSize = "30px";
+        scoreNum.style.color = "green";
+
+        tryNum.style.color = "green";
+      }
+      if (guessesLeft === 2) {
+        tryNum.innerHTML = " Second Try";
+        scoreNum.innerHTML = "90 of 100";
+        // scoreNum.style.fontSize = "30px";
+        scoreNum.style.color = "lightBlue";
+        tryNum.style.color = "lightBlue";
+      }
+      if (guessesLeft === 1) {
+        tryNum.innerHTML = " Third Try";
+        tryNum.style.color = "orange";
+        scoreNum.style.color = "orange";
+        scoreNum.innerHTML = "80 of 100";
+        // scoreNum.style.fontSize = "30px";
+      }
       // p1.innerHTML = "Congatulations";
       p1.innerText = String.fromCodePoint(0x1f603, 0x1f60d);
       score.style.color = "rgb(0, 197, 0)";
@@ -38,7 +65,6 @@ function hex() {
 
       p1.style.fontSize = "30px";
       p1.disabled = true;
-      // p1.style.opacity = "0.6";
       guessesLeft -= 1;
     }
     if (guessesLeft == 0) {
@@ -51,22 +77,42 @@ function hex() {
       x.style.color = "red";
     }
     if (guessesLeft == 0 && (random == 2 || random == 7)) {
+      scoreNum.innerHTML = "0 of 100";
+      tryNum.innerHTML = "You Lost";
+      scoreNum.style.color = "red";
+      tryNum.style.color = "red";
       p2.innerHTML = "Answer";
       p2.style.color = "white";
     }
     if (guessesLeft == 0 && (random == 3 || random == 0)) {
+      tryNum.innerHTML = "You Lost";
+      scoreNum.innerHTML = "0 of 100";
+      scoreNum.style.color = "red";
+      tryNum.style.color = "red";
       p3.innerHTML = "Answer";
       p3.style.color = "white";
     }
     if (guessesLeft == 0 && random == 5) {
+      tryNum.innerHTML = "You Lost";
+      scoreNum.innerHTML = "0 of 100";
+      scoreNum.style.color = "red";
+      tryNum.style.color = "red";
       p1.innerHTML = "Answer";
       p1.style.color = "white";
     }
     if (guessesLeft == 0 && random == 8) {
+      tryNum.innerHTML = "You Lost";
+      scoreNum.innerHTML = "0 of 100";
+      scoreNum.style.color = "red";
+      tryNum.style.color = "red";
       p5.innerHTML = "Answer";
       p5.style.color = "white";
     }
     if (guessesLeft == 0 && (random == 4 || random == 9)) {
+      tryNum.innerHTML = "You Lost";
+      scoreNum.innerHTML = "0 of 100";
+      scoreNum.style.color = "red";
+      tryNum.style.color = "red";
       p6.innerHTML = "Answer";
       p6.style.color = "white";
     }
@@ -77,6 +123,29 @@ function hex() {
   p2.addEventListener("click", one2);
   function one2() {
     if (random == 2 || random == 7) {
+      if (guessesLeft === 3) {
+        tryNum.innerHTML = "First Try";
+        tryNum.style.textAlign = "center";
+        scoreNum.innerHTML = "100 of 100";
+
+        // scoreNum.style.fontSize = "30px";
+        scoreNum.style.color = "green";
+        tryNum.style.color = "green";
+      }
+      if (guessesLeft === 2) {
+        tryNum.innerHTML = " Second Try";
+        scoreNum.innerHTML = "90 of 100";
+        // scoreNum.style.fontSize = "30px";
+        scoreNum.style.color = "lightBlue";
+        tryNum.style.color = "lightBlue";
+      }
+      if (guessesLeft === 1) {
+        tryNum.innerHTML = " Third Try";
+        tryNum.style.color = "orange";
+        scoreNum.style.color = "orange";
+        scoreNum.innerHTML = "80 of 100";
+        // scoreNum.style.fontSize = "30px";
+      }
       // p2.innerHTML = "Congatulations";
       p2.innerText = String.fromCodePoint(0x1f60d, 0x1f618);
       score.style.color = "rgb(0, 197, 0)";
@@ -105,22 +174,42 @@ function hex() {
       x.style.color = "red";
     }
     if (guessesLeft == 0 && (random == 1 || random == 6)) {
+      tryNum.innerHTML = "You Lost";
+      scoreNum.innerHTML = "0 of 100";
+      scoreNum.style.color = "red";
+      tryNum.style.color = "red";
       p1.innerHTML = "Answer";
       p1.style.color = "white";
     }
     if (guessesLeft == 0 && (random == 3 || random == 0)) {
+      tryNum.innerHTML = "You Lost";
+      scoreNum.innerHTML = "0 of 100";
+      scoreNum.style.color = "red";
+      tryNum.style.color = "red";
       p3.innerHTML = "Answer";
       p3.style.color = "white";
     }
     if (guessesLeft == 0 && random == 5) {
+      tryNum.innerHTML = "You Lost";
+      scoreNum.innerHTML = "0 of 100";
+      scoreNum.style.color = "red";
+      tryNum.style.color = "red";
       p4.innerHTML = "Answer";
       p4.style.color = "white";
     }
     if (guessesLeft == 0 && random == 8) {
+      tryNum.innerHTML = "You Lost";
+      scoreNum.innerHTML = "0 of 100";
+      scoreNum.style.color = "red";
+      tryNum.style.color = "red";
       p5.innerHTML = "Answer";
       p5.style.color = "white";
     }
     if (guessesLeft == 0 && (random == 4 || random == 9)) {
+      tryNum.innerHTML = "You Lost";
+      scoreNum.innerHTML = "0 of 100";
+      scoreNum.style.color = "red";
+      tryNum.style.color = "red";
       p6.innerHTML = "Answer";
       p6.style.color = "white";
     }
@@ -131,6 +220,29 @@ function hex() {
   p3.addEventListener("click", one3);
   function one3() {
     if (random == 3 || random == 0) {
+      if (guessesLeft === 3) {
+        tryNum.innerHTML = "First Try";
+        tryNum.style.textAlign = "center";
+        scoreNum.innerHTML = "100 of 100";
+
+        // scoreNum.style.fontSize = "30px";
+        scoreNum.style.color = "green";
+        tryNum.style.color = "green";
+      }
+      if (guessesLeft === 2) {
+        tryNum.innerHTML = " Second Try";
+        scoreNum.innerHTML = "90 of 100";
+        // scoreNum.style.fontSize = "30px";
+        scoreNum.style.color = "lightBlue";
+        tryNum.style.color = "lightBlue";
+      }
+      if (guessesLeft === 1) {
+        tryNum.innerHTML = " Third Try";
+        tryNum.style.color = "orange";
+        scoreNum.style.color = "orange";
+        scoreNum.innerHTML = "80 of 100";
+        // scoreNum.style.fontSize = "30px";
+      }
       // p3.innerHTML = "Congatulations";
       p3.innerText = String.fromCodePoint(0x1f970, 0x1f609);
       score.style.color = "rgb(0, 197, 0)";
@@ -160,22 +272,42 @@ function hex() {
       x.style.color = "red";
     }
     if (guessesLeft == 0 && (random == 1 || random == 6)) {
+      tryNum.innerHTML = "You Lost";
+      scoreNum.innerHTML = "0 of 100";
+      scoreNum.style.color = "red";
+      tryNum.style.color = "red";
       p1.innerHTML = "Answer";
       p1.style.color = "white";
     }
     if (guessesLeft == 0 && (random == 2 || random == 7)) {
+      tryNum.innerHTML = "You Lost";
       p2.innerHTML = "Answer";
+      scoreNum.innerHTML = "0 of 100";
+      scoreNum.style.color = "red";
+      tryNum.style.color = "red";
       p2.style.color = "white";
     }
     if (guessesLeft == 0 && random == 5) {
+      tryNum.innerHTML = "You Lost";
+      scoreNum.style.color = "red";
+      tryNum.style.color = "red";
+      scoreNum.innerHTML = "0 of 100";
       p4.innerHTML = "Answer";
       p4.style.color = "white";
     }
     if (guessesLeft == 0 && random == 8) {
+      tryNum.innerHTML = "You Lost";
+      scoreNum.innerHTML = "0 of 100";
+      scoreNum.style.color = "red";
+      tryNum.style.color = "red";
       p5.innerHTML = "Answer";
       p5.style.color = "white";
     }
     if (guessesLeft == 0 && (random == 4 || random == 9)) {
+      tryNum.innerHTML = "You Lost";
+      scoreNum.innerHTML = "0 of 100";
+      scoreNum.style.color = "red";
+      tryNum.style.color = "red";
       p6.innerHTML = "Answer";
       p6.style.color = "white";
     }
@@ -186,6 +318,29 @@ function hex() {
   p4.addEventListener("click", one4);
   function one4() {
     if (random == 5) {
+      if (guessesLeft === 3) {
+        tryNum.innerHTML = "First Try";
+        tryNum.style.textAlign = "center";
+        scoreNum.innerHTML = "100 of 100";
+
+        // scoreNum.style.fontSize = "30px";
+        scoreNum.style.color = "green";
+        tryNum.style.color = "green";
+      }
+      if (guessesLeft === 2) {
+        tryNum.innerHTML = " Second Try";
+        scoreNum.innerHTML = "90 of 100";
+        // scoreNum.style.fontSize = "30px";
+        scoreNum.style.color = "lightBlue";
+        tryNum.style.color = "lightBlue";
+      }
+      if (guessesLeft === 1) {
+        tryNum.innerHTML = " Third Try";
+        tryNum.style.color = "orange";
+        scoreNum.style.color = "orange";
+        scoreNum.innerHTML = "80 of 100";
+        // scoreNum.style.fontSize = "30px";
+      }
       // p4.innerHTML = "Congatulations";
       p4.innerText = String.fromCodePoint(0x1f60a, 0x1f970);
       score.style.color = "rgb(0, 197, 0)";
@@ -215,22 +370,44 @@ function hex() {
       x.style.color = "red";
     }
     if (guessesLeft == 0 && (random == 1 || random == 6)) {
+      tryNum.innerHTML = "You Lost";
+      scoreNum.innerHTML = "0 of 100";
+      scoreNum.style.color = "red";
+      tryNum.style.color = "red";
       p1.innerHTML = "Answer";
       p1.style.color = "white";
     }
     if (guessesLeft == 0 && (random == 2 || random == 7)) {
+      tryNum.innerHTML = "You Lost";
+      scoreNum.innerHTML = "0 of 100";
+      scoreNum.style.color = "red";
+      tryNum.style.color = "red";
+
       p2.innerHTML = "Answer";
       p2.style.color = "white";
     }
     if (guessesLeft == 0 && (random == 3 || random == 0)) {
+      tryNum.innerHTML = "You Lost";
+      scoreNum.innerHTML = "0 of 100";
+      scoreNum.style.color = "red";
+      tryNum.style.color = "red";
       p3.innerHTML = "Answer";
       p3.style.color = "white";
     }
     if (guessesLeft == 0 && random == 8) {
+      tryNum.innerHTML = "You Lost";
+      scoreNum.innerHTML = "0 of 100";
+      scoreNum.style.color = "red";
+      tryNum.style.color = "red";
+
       p5.innerHTML = "Answer";
       p5.style.color = "white";
     }
     if (guessesLeft == 0 && (random == 4 || random == 9)) {
+      tryNum.innerHTML = "You Lost";
+      scoreNum.innerHTML = "0 of 100";
+      scoreNum.style.color = "red";
+      tryNum.style.color = "red";
       p6.innerHTML = "Answer";
       p6.style.color = "white";
     }
@@ -241,6 +418,29 @@ function hex() {
   p5.addEventListener("click", one5);
   function one5() {
     if (random == 8) {
+      if (guessesLeft === 3) {
+        tryNum.innerHTML = "First Try";
+        tryNum.style.textAlign = "center";
+        scoreNum.innerHTML = "100 of 100";
+
+        // scoreNum.style.fontSize = "30px";
+        scoreNum.style.color = "green";
+        tryNum.style.color = "green";
+      }
+      if (guessesLeft === 2) {
+        tryNum.innerHTML = " Second Try";
+        scoreNum.innerHTML = "90 of 100";
+        // scoreNum.style.fontSize = "30px";
+        scoreNum.style.color = "lightBlue";
+        tryNum.style.color = "lightBlue";
+      }
+      if (guessesLeft === 1) {
+        tryNum.innerHTML = " Third Try";
+        tryNum.style.color = "orange";
+        scoreNum.style.color = "orange";
+        scoreNum.innerHTML = "80 of 100";
+        // scoreNum.style.fontSize = "30px";
+      }
       // p5.innerHTML = "Yaaay";
       p5.innerText = String.fromCodePoint(0x1f929, 0x1f618);
       score.style.color = "rgb(0, 197, 0)";
@@ -268,22 +468,43 @@ function hex() {
       x.style.color = "red";
     }
     if (guessesLeft == 0 && (random == 1 || random == 6)) {
+      tryNum.innerHTML = "You Lost";
+      scoreNum.style.color = "red";
+      tryNum.style.color = "red";
+
+      scoreNum.innerHTML = "0 of 100";
       p1.innerHTML = "Answer";
       p1.style.color = "white";
     }
     if (guessesLeft == 0 && (random == 2 || random == 7)) {
+      tryNum.innerHTML = "You Lost";
+      scoreNum.innerHTML = "0 of 100";
+      scoreNum.style.color = "red";
+      tryNum.style.color = "red";
       p2.innerHTML = "Answer";
       p2.style.color = "white";
     }
     if (guessesLeft == 0 && (random == 3 || random == 0)) {
+      tryNum.innerHTML = "You Lost";
       p3.innerHTML = "Answer";
+      scoreNum.innerHTML = "0 of 100";
+      scoreNum.style.color = "red";
+      tryNum.style.color = "red";
       p3.style.color = "white";
     }
     if (guessesLeft == 0 && random == 5) {
+      tryNum.innerHTML = "You Lost";
+      scoreNum.innerHTML = "0 of 100";
+      scoreNum.style.color = "red";
+      tryNum.style.color = "red";
       p4.innerHTML = "Answer";
       p4.style.color = "white";
     }
     if (guessesLeft == 0 && (random == 4 || random == 9)) {
+      tryNum.innerHTML = "You Lost";
+      scoreNum.innerHTML = "0 of 100";
+      scoreNum.style.color = "red";
+      tryNum.style.color = "red";
       p6.innerHTML = "Answer";
       p6.style.color = "white";
     }
@@ -294,6 +515,29 @@ function hex() {
   p6.addEventListener("click", one6);
   function one6() {
     if (random == 9 || random == 4) {
+      if (guessesLeft === 3) {
+        tryNum.innerHTML = "First Try";
+        tryNum.style.textAlign = "center";
+        scoreNum.innerHTML = "100 of 100";
+
+        // scoreNum.style.fontSize = "30px";
+        scoreNum.style.color = "green";
+        tryNum.style.color = "green";
+      }
+      if (guessesLeft === 2) {
+        tryNum.innerHTML = " Second Try";
+        scoreNum.innerHTML = "90 of 100";
+        // scoreNum.style.fontSize = "30px";
+        scoreNum.style.color = "lightBlue";
+        tryNum.style.color = "lightBlue";
+      }
+      if (guessesLeft === 1) {
+        tryNum.innerHTML = " Third Try";
+        tryNum.style.color = "orange";
+        scoreNum.style.color = "orange";
+        scoreNum.innerHTML = "80 of 100";
+        // scoreNum.style.fontSize = "30px";
+      }
       // p6.innerHTML = "Congatulations";
       p6.innerText = String.fromCodePoint(0x1f970, 0x1f617);
       score.style.color = "rgb(0, 197, 0)";
@@ -323,22 +567,42 @@ function hex() {
       x.style.color = "red";
     }
     if (guessesLeft == 0 && (random == 1 || random == 6)) {
+      tryNum.innerHTML = "You Lost";
+      scoreNum.innerHTML = "0 of 100";
+      scoreNum.style.color = "red";
+      tryNum.style.color = "red";
       p1.innerHTML = "Answer";
       p1.style.color = "white";
     }
     if (guessesLeft == 0 && (random == 2 || random == 7)) {
+      tryNum.innerHTML = "You Lost";
+      scoreNum.innerHTML = "0 of 100";
+      scoreNum.style.color = "red";
+      tryNum.style.color = "red";
       p2.innerHTML = "Answer";
       p2.style.color = "white";
     }
     if (guessesLeft == 0 && (random == 3 || random == 0)) {
+      tryNum.innerHTML = "You Lost";
+      scoreNum.innerHTML = "0 of 100";
+      scoreNum.style.color = "red";
+      tryNum.style.color = "red";
       p3.innerHTML = "Answer";
       p3.style.color = "white";
     }
     if (guessesLeft == 0 && random == 5) {
+      tryNum.innerHTML = "You Lost";
       p4.innerHTML = "Answer";
+      scoreNum.style.color = "red";
+      tryNum.style.color = "red";
+      scoreNum.innerHTML = "0 of 100";
       p4.style.color = "white";
     }
     if (guessesLeft == 0 && random == 8) {
+      tryNum.innerHTML = "You Lost";
+      scoreNum.innerHTML = "0 of 100";
+      scoreNum.style.color = "red";
+      tryNum.style.color = "red";
       p5.innerHTML = "Answer";
       p5.style.color = "white";
     }
