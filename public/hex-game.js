@@ -33,7 +33,6 @@ function hex() {
       p5.disabled = true;
       p6.disabled = true;
     }
-    givenTitle;
     if (random != 1 && random != 6) {
       p1.innerHTML = String.fromCodePoint(0x1f612);
 
